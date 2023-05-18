@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TRABAJO 5</title>
+    <h1>The Weeknd</h1>
+    <style>
+      body {
+          background-image: url('brillos.png');
+          background-size: cover;
+      }
+  </style>
+   
+   <script>
+    function cambiarFondo() {
+        var body = document.getElementsByTagName("body")[0];
+        body.style.backgroundImage = "url('rosa.jpg')";
+    }
+   
+
+    function cambiarTexto() {
+        var parrafo = document.getElementById("texto-p");
+        var nuevoTexto = "The Weeknd es el mejor cantante del mundo y sus canciones son las mejores :)";
+        parrafo.textContent = nuevoTexto;
+    }
+
+    function esconderMensaje() {
+        var mensaje = document.getElementById("mensaje-h2");
+        mensaje.style.display = "none";
+    }
+
+    function cambiarImagen() {
+        var imagen = document.getElementById("myImage");
+        imagen.src = "cambio.jpg";
+    }
+
+    function restaurarImagen() {
+        var imagen = document.getElementById("myImage");
+        imagen.src = "theweeknd.jpg";
+    }
+
+    function escribirTexto() {
+        var div = document.getElementById("miDiv");
+        var nuevoContenido = "<h1>Este texto no lo escribió Abril, lo escribió JavaScript</h1>";
+        div.innerHTML = nuevoContenido;
+    }
+</script>
+</head>
+<body>
+  <h2 id="mensaje-h2">Hola mundo</h2>
+  <p id="texto-p">Abel Makkonen Tesfaye (Toronto, Ontario; 16 de febrero de 1990), conocido artísticamente como The Weeknd, es un cantante, rapero, compositor, productor discográfico y actor canadiense nacionalizado estadounidense.1​ Conocido por su versatilidad sónica y lirismo oscuro, su música explora el escapismo, el romance y la melancolía, y a menudo se inspira en experiencias personales</p> 
+  <p>Algunas de sus canciones son: </p>
+  <P>1.- Save your tears
+    <br>
+     2.-Die for you
+     <br>
+     3.-Starboy
+  </P>
+  
+  <div id="miDiv"></div>
+
+  <div>
+    <img id="myImage" src="theweeknd.jpg" width="200" height="250" alt="cantantefav">
+    <div>
+      <button onclick="cambiarImagen()">Cambiar imagen</button>
+      <button onclick="restaurarImagen()">Restaurar imagen</button>
+    </div>
+  </div>
+
+  <button onclick="cambiarFondo()">Cambiar imagen de fondo</button>
+  <button onclick="cambiarTexto()">Cambiar texto</button>
+  <button onclick="esconderMensaje()">Esconder mensaje</button>
+  <button onclick="escribirTexto()">Escribir texto</button>
+ 
+</body>
+</html>
